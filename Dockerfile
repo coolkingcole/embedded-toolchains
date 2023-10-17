@@ -3,7 +3,7 @@ RUN apt-get update
 RUN apt-get -y install build-essential git wget libncurses-dev bc curl
 RUN mkdir -p /opt/cross
 
-# musl-cross i686
+# musl-cross i686 
 ENV PATH="/opt/cross/i686-linux-musl/bin/:${PATH}"
 RUN wget https://musl.cc/i686-linux-musl-cross.tgz -O - | tar -xz -C /opt/cross && ln -s /opt/cross/i686-linux-musl-cross /opt/cross/i686-linux-musl
 # musl-cross x86_64
